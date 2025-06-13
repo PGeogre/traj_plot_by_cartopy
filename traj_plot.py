@@ -81,7 +81,8 @@ def update(frame):
         
         # 动态标注优化
         # if frame >= 20 and frame % 5 == 0:  # 每10帧更新一次标注
-        a = random.randint(10, 20) # 设置随机数，决定何时显示标注
+        # a = random.randint(10, 20) # 设置随机数，决定何时显示标注
+        a = random.randint(0, 10) # 设置随机数，决定何时显示标注
         if frame >= a:  
             last_idx = min(frame, len(lon)-1)
             x_annot, y_annot = m(lon[last_idx], lat[last_idx])
